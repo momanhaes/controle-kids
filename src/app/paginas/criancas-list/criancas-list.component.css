@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+    /* color: rgba(0,0,0,1); */
+}
+
+ul#listaCriancas {
+    list-style: none;
+    position: relative;
+}
+
+li#itemCriancas {
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+    /* transition: background-color 1s; */
+}
+
+div#interface {
+    background-color: white;
+    width: 1000px;
+    margin: -20px auto 20px auto;
+    padding: 10px 10px 10px 10px;
+}
+
+footer#rodape {
+    border-top: 1px solid #007bff;
+}
+
+footer#rodape p {
+    text-align: center;
+}
