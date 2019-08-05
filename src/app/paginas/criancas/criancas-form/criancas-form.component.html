@@ -1,1 +1,93 @@
-<p>Formulário de crianças</p>
+<nav class="navbar navbar-dark bg-primary mb-5">
+    <a class="navbar-brand" routerLink="/criancas">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        Lista de Crianças
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+    </a>
+</nav>
+
+<h1 class="display-4 text-center mb-5">Cadastro de Crianças</h1>
+
+<div class="container">
+    <div class="card">
+
+        <div class="card-header bg-primary text-light">
+            <h5 class="mt-2">Nova Criança</h5>
+        </div>
+
+        <div class="card-body">
+
+            <form>
+
+                <div class="form-group">
+                    <label class="font-weight-bold">Nome</label>
+                    <input type="text" class="form-control" name="nome" id="idNome" required minlength="3">
+
+                    <!-- <div *ngIf="nome.invalid && (nome.dirty || nome.touched)" class="alert alert-danger">
+                    <div *ngIf="nome?.errors.required">
+                        Nome é obrigatório.
+                    </div>
+                    <div *ngIf="nome?.errors.minlength">
+                        Nome precisa ter no mínino 3 caracteres.
+                    </div>
+                </div> -->
+                </div>
+
+                <div class="form-group">
+                    <label class="font-weight-bold">Nome do responsável</label>
+                    <input type="text" class="form-control" name="responsavel" required minlength="3">
+
+                    <!-- <div *ngIf="responsavel.invalid && (responsavel.dirty || responsavel.touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="responsavel?.errors.required">
+                        Nome do responsável é obrigatório.
+                    </div>
+                    <div *ngIf="responsavel?.errors.minlength">
+                        Nome do responsável precisa ter no mínino 3 caracteres.
+                    </div>
+                </div> -->
+                </div>
+
+                <div class="form-group">
+                    <label class="font-weight-bold">Telefone</label>
+                    <input type="text" class="form-control" name="telefone" required minlength="8" maxlength="9">
+
+                    <!-- <div *ngIf="telefone.invalid && (telefone.dirty || telefone.touched)" class="alert alert-danger">
+                    <div *ngIf="telefone?.errors.required">
+                        Telefone é obrigatório.
+                    </div>
+                    <div *ngIf="telefone?.errors.minlength">
+                        Telefone precisa ter no mínino 8 caracteres.
+                    </div>
+                    <div *ngIf="telefone?.errors.minlength">
+                        Telefone tem no máximo 9 caracteres.
+                    </div>
+                </div> -->
+                </div>
+
+                <!-- <div class="form-group">
+                <label class="font-weight-bold">Preço</label>
+                <input type="number" class="form-control" [(ngModel)]="produto.preco" name="preco" #preco="ngModel"
+                    required />
+
+                <div *ngIf="preco.invalid && (preco.dirty || preco.touched)" class="alert alert-danger">
+                    <div *ngIf="preco?.errors.required">
+                        Preço é obrigatório.
+                    </div>
+                </div>
+            </div> -->
+
+                <button type="submit" class="btn btn-primary font-weight-bold">Salvar</button>
+                <a routerLink="/criancas" class="btn btn-danger ml-2 font-weight-bold">Cancelar</a>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="container text-center">
+    <p>Copyright 2019 - Feito por Matheus Manhães <br> <a href="http://www.github.com/momanhaes"
+            target="_blank">GitHub</a>
+        |
+        <a href="http://www.mmanhaes.com" target="_blank">Site</a></p>
+</footer>

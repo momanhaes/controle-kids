@@ -1,154 +1,83 @@
 <nav class="navbar navbar-dark bg-primary mb-5">
-    <a class="navbar-brand" href="#">Início</a>
+    <a class="navbar-brand" routerLink="/home">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        Página Inicial
+        <i class="fa fa-home" aria-hidden="true"></i>
+    </a>
 </nav>
 
 <h1 class="display-4 text-center mb-5">Lista de Crianças</h1>
 
-<div id="interface">
-    <div class="card mb-4">
-        <h4 class="card-header">MARIA DA SILVA</h4>
+<div class="container mb-4">
+    <a class="btn btn-outline-primary" routerLink="/criancas/cadastrar">
+        <i class=" fa fa-user-plus" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="container">
+
+    <div class="card bg-light mb-4">
+        <h4 class="bg-primary card-header text-light">MARIA DA SILVA</h4>
         <div class="card-body">
-            <ul id="listaCriancas">
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Responsável</h5>
+
+            <div class="row">
+                <div class="col col-md-2">
+                    <h5 class="card-title mb-4">Responsável</h5>
                     <h5 class="text-primary mb-4">José de Souza</h5>
-                </li>
-
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Telefone</h5>
-                    <h5 class="text-primary mb-4">(21) 99999-9999</h5>
-                </li>
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Início</h5>
-                    <h5 class="text-primary mb-4">19:31:00</h5>
-                </li>
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Tempo</h5>
-                    <h5 class="text-primary mb-4">20 minutos</h5>
-                </li>
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Fim</h5>
-                    <h5 class="text-primary mb-4">19:51:00</h5>
-                </li>
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Valor</h5>
-                    <h5 class="text-primary mb-4">R$20,00</h5>
-                </li>
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Pagamento</h5>
-                    <h5 class="text-primary mb-4">Ok</h5>
-                </li>
-
-            </ul>
-            <h5 class="card-title mb-3">Status</h5>
-
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                    style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                    style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar"
-                    style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                    style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-5">
-                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                    style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <!-- <p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
-                aria-expanded="false" aria-controls="collapseExample">
-                Mais detalhes
-            </a>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                Detalhado
-            </div>
-        </div> -->
-        </div>
-    </div>
-
-    <div class="card mb-4">
-        <h4 class="card-header">JOSÉ SANTOS</h4>
-        <div class="card-body">
-            <ul id="listaCriancas">
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Responsável</h5>
-                    <h5 class="text-primary mb-4">João de Souza</h5>
-                </li>
-
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Telefone</h5>
-                    <h5 class="text-primary mb-4">(21) 99999-9999</h5>
-                </li>
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Início</h5>
-                    <h5 class="text-primary mb-4">19:31:00</h5>
-                </li>
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Tempo</h5>
-                    <h5 class="text-primary mb-4">20 minutos</h5>
-                </li>
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Fim</h5>
-                    <h5 class="text-primary mb-4">19:51:00</h5>
-                </li>
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Valor</h5>
-                    <h5 class="text-primary mb-4">R$20,00</h5>
-                </li>
-                <li id="itemCriancas">
-                    <h5 class="card-title mb-3">Pagamento</h5>
-                    <h5 class="text-primary mb-4">Pendente</h5>
-                </li>
-
-            </ul>
-            <h5 class="card-title mb-3">Status</h5>
-
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                    style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                    style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar"
-                    style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                    style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-5">
-                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                    style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <!-- <p>
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
-                    aria-expanded="false" aria-controls="collapseExample">
-                    Mais detalhes
-                </a>
-            </p>
-            <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    Detalhado
                 </div>
-            </div> -->
+                <div class="col col-md-2">
+                    <h5 class="card-title mb-4">Telefone</h5>
+                    <h5 class="text-primary mb-4">(21) 99999-9999</h5>
+                </div>
+                <div class="col col-md-2">
+                    <h5 class="card-title mb-4">Tempo</h5>
+                    <h5 class="text-primary mb-4">20 minutos</h5>
+                </div>
+                <div class="col col-md-2">
+                    <h5 class="card-title mb-4">Início</h5>
+                    <h5 class="text-primary mb-4">19:31:00</h5>
+                </div>
+                <div class="col col-md-2">
+                    <h5 class="card-title mb-4">Fim</h5>
+                    <h5 class="text-primary mb-4">19:51:00</h5>
+                </div>
+                <div class="col col-md-2">
+                    <h5 class="card-title mb-4">Valor</h5>
+                    <h5 class="text-primary mb-4">R$20,00</h5>
+                </div>
+                <!-- <div class="col col-md-2">
+                    <h5 class="card-title mb-4">Pagamento</h5>
+                    <h5 class="text-primary mb-4">Ok</h5>
+                </div> -->
+            </div>
+
+            <h5 class="card-title mb-3">Status</h5>
+
+            <div class="progress mb-2">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                    style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar"
+                    style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
+                    style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress mb-5">
+                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                    style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
         </div>
     </div>
 </div>
 
-<footer id="rodape">
+<footer class="container text-center">
     <p>Copyright 2019 - Feito por Matheus Manhães <br> <a href="http://www.github.com/momanhaes"
             target="_blank">GitHub</a>
         |
