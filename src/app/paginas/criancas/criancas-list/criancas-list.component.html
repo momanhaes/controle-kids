@@ -9,9 +9,17 @@
 <h1 class="display-4 text-center mb-5">Lista de Crianças</h1>
 
 <div class="container mb-4">
-    <a class="btn btn-outline-primary" routerLink="/criancas/cadastrar">
-        <i class=" fa fa-user-plus" aria-hidden="true"></i>
-    </a>
+    <nav class="navbar navbar-primary bg-light">
+        <form class="form-inline">
+
+            <button class="btn btn-outline-primary my-2 my-sm-0" routerLink="/criancas/cadastrar"><strong> <i
+                        class=" fa fa-user-plus" aria-hidden="true"></i> Cadastrar</strong></button>
+            <input class="form-control ml-sm-2 mr-sm-2" type="search"
+                placeholder="Pesquise por qualquer item do formulário" aria-label="Pesquisar" size="109">
+            <button class="btn btn-outline-primary my-2 my-sm-0"><strong> <i class="fa fa-search"
+                        aria-hidden="true"></i> Pesquisar</strong></button>
+        </form>
+    </nav>
 </div>
 
 <div class="container">
@@ -78,8 +86,9 @@
 </div>
 
 <footer class="container text-center">
-    <p>Copyright 2019 - Feito por Matheus Manhães <br> <a href="http://www.github.com/momanhaes"
-            target="_blank">GitHub</a>
-        |
-        <a href="http://www.mmanhaes.com" target="_blank">Site</a></p>
+    <p class="align-bottom"> © Copyright 2019 - Feito por Matheus Manhães <br>
+        <a href="http://www.github.com/momanhaes" target="_blank"> <i class="fa fa-github" aria-hidden="true"></i>
+            GitHub</a> |
+        <a href="https://www.linkedin.com/in/matheus-manh%C3%A3es-7a272a170/" target="_blank"> <i
+                class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></p>
 </footer>

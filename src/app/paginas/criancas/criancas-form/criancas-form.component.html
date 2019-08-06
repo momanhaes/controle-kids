@@ -2,7 +2,7 @@
     <a class="navbar-brand" routerLink="/criancas">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         Lista de Crianças
-        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+        <i class="fa fa-child" aria-hidden="true"></i>
     </a>
 </nav>
 
@@ -12,13 +12,12 @@
     <div class="card">
 
         <div class="card-header bg-primary text-light">
-            <h5 class="mt-2">Nova Criança</h5>
+            <h5 class="mt-2"> <i class="fa fa-user-plus" aria-hidden="true"></i> Nova Criança</h5>
         </div>
 
         <div class="card-body">
 
             <form>
-
                 <div class="form-group">
                     <label class="font-weight-bold">Nome</label>
                     <input type="text" class="form-control" name="nome" id="idNome" required minlength="3">
@@ -77,8 +76,9 @@
                 </div>
             </div> -->
 
-                <button type="submit" class="btn btn-primary font-weight-bold">Salvar</button>
-                <a routerLink="/criancas" class="btn btn-danger ml-2 font-weight-bold">Cancelar</a>
+                <button type="submit" class="btn btn-primary font-weight-bold"> <i class="fa fa-check" aria-hidden="true"></i> Salvar</button>
+                <a routerLink="/criancas" class="btn btn-danger ml-2 font-weight-bold"> <i class="fa fa-times"
+                        aria-hidden="true"></i> Cancelar</a>
 
             </form>
         </div>
@@ -86,8 +86,9 @@
 </div>
 
 <footer class="container text-center">
-    <p>Copyright 2019 - Feito por Matheus Manhães <br> <a href="http://www.github.com/momanhaes"
-            target="_blank">GitHub</a>
-        |
-        <a href="http://www.mmanhaes.com" target="_blank">Site</a></p>
+    <p class="align-bottom"> © Copyright 2019 - Feito por Matheus Manhães <br>
+        <a href="http://www.github.com/momanhaes" target="_blank"> <i class="fa fa-github" aria-hidden="true"></i>
+            GitHub</a> |
+        <a href="https://www.linkedin.com/in/matheus-manh%C3%A3es-7a272a170/" target="_blank"> <i
+                class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></p>
 </footer>
