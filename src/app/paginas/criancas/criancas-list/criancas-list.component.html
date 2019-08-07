@@ -1,94 +1,68 @@
-<nav class="navbar navbar-dark bg-primary mb-5">
-    <a class="navbar-brand" routerLink="/home">
-        <i class="fa fa-angle-left" aria-hidden="true"></i>
-        Página Inicial
-        <i class="fa fa-home" aria-hidden="true"></i>
-    </a>
-</nav>
+<app-header></app-header>
+<div id="content" class="mt-5">
+    <h1 class="display-4 text-center mb-5">Lista de Crianças</h1>
 
-<h1 class="display-4 text-center mb-5">Lista de Crianças</h1>
-
-<div class="container mb-4">
-    <nav class="navbar navbar-primary bg-light">
-        <form class="form-inline">
-
-            <button class="btn btn-outline-primary my-2 my-sm-0" routerLink="/criancas/cadastrar"><strong> <i
-                        class=" fa fa-user-plus" aria-hidden="true"></i> Cadastrar</strong></button>
-            <input class="form-control ml-sm-2 mr-sm-2" type="search"
-                placeholder="Pesquise por qualquer item do formulário" aria-label="Pesquisar" size="109">
-            <button class="btn btn-outline-primary my-2 my-sm-0"><strong> <i class="fa fa-search"
-                        aria-hidden="true"></i> Pesquisar</strong></button>
-        </form>
-    </nav>
-</div>
-
-<div class="container">
-
-    <div class="card bg-light mb-4">
-        <h4 class="bg-primary card-header text-light">MARIA DA SILVA</h4>
-        <div class="card-body">
-
+    <div class="container mb-4">
+        <form class="w-100">
             <div class="row">
-                <div class="col col-md-2">
-                    <h5 class="card-title mb-4">Responsável</h5>
-                    <h5 class="text-primary mb-4">José de Souza</h5>
+                <div class="col-4 mb-4">
+                    <button class="btn btn-outline-primary font-weight-bold" routerLink="/criancas/cadastrar">
+                        <i class=" fa fa-user-plus" aria-hidden="true"></i> Cadastrar</button>
                 </div>
-                <div class="col col-md-2">
-                    <h5 class="card-title mb-4">Telefone</h5>
-                    <h5 class="text-primary mb-4">(21) 99999-9999</h5>
+                <div class="col-12">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-primary"> <i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Pesquise por qualquer item da lista">
+                    </div>
                 </div>
-                <div class="col col-md-2">
-                    <h5 class="card-title mb-4">Tempo</h5>
-                    <h5 class="text-primary mb-4">20 minutos</h5>
-                </div>
-                <div class="col col-md-2">
-                    <h5 class="card-title mb-4">Início</h5>
-                    <h5 class="text-primary mb-4">19:31:00</h5>
-                </div>
-                <div class="col col-md-2">
-                    <h5 class="card-title mb-4">Fim</h5>
-                    <h5 class="text-primary mb-4">19:51:00</h5>
-                </div>
-                <div class="col col-md-2">
-                    <h5 class="card-title mb-4">Valor</h5>
-                    <h5 class="text-primary mb-4">R$20,00</h5>
-                </div>
-                <!-- <div class="col col-md-2">
-                    <h5 class="card-title mb-4">Pagamento</h5>
-                    <h5 class="text-primary mb-4">Ok</h5>
-                </div> -->
-            </div>
 
-            <h5 class="card-title mb-3">Status</h5>
+            </div>
+        </form>
+    </div>
 
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                    style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                    style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar"
-                    style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-2">
-                <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
-                    style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <div class="progress mb-5">
-                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
-                    style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="container">
+
+        <div class="card bg-light mb-4">
+            <h5 class="bg-primary card-header text-light mb-4">MARIA DA SILVA</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col col-md-2">
+                        <h5 class="card-title text-center mb-4">Responsável
+                        </h5>
+                        <h5 class="text-primary text-center mb-4">José de Souza</h5>
+                    </div>
+                    <div class="col col-md-2">
+                        <h5 class="card-title text-center mb-4">Telefone</h5>
+                        <h5 class="text-primary text-center mb-4">(21) 99999-9999</h5>
+                    </div>
+                    <div class="col col-md-2">
+                        <h5 class="card-title text-center mb-4">Tempo</h5>
+                        <h5 class="text-primary text-center mb-4">20 minutos</h5>
+                    </div>
+                    <div class="col col-md-2">
+                        <h5 class="card-title text-center mb-4">Início</h5>
+                        <h5 class="text-primary text-center mb-4">19:31:00</h5>
+                    </div>
+                    <div class="col col-md-2">
+                        <h5 class="card-title text-center mb-4">Fim</h5>
+                        <h5 class="text-primary text-center mb-4">19:51:00</h5>
+                    </div>
+                    <div class="col col-md-2">
+                        <h5 class="card-title text-center mb-4">Valor</h5>
+                        <h5 class="text-primary text-center mb-4">R$20,00</h5>
+                    </div>
+                </div>
+
+                <h5 class="card-title mt-2 mb-4">Status</h5>
+
+                <div class="progress mb-3">
+                    <div class="progress-bar progress-bar-striped bg-primary progress-bar-animated" role="progressbar"
+                        style="width: 14%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
         </div>
+
     </div>
 </div>
-
-<footer class="container text-center">
-    <p class="align-bottom"> © Copyright 2019 - Feito por Matheus Manhães <br>
-        <a href="http://www.github.com/momanhaes" target="_blank"> <i class="fa fa-github" aria-hidden="true"></i>
-            GitHub</a> |
-        <a href="https://www.linkedin.com/in/matheus-manh%C3%A3es-7a272a170/" target="_blank"> <i
-                class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></p>
-</footer>

@@ -1,14 +1,15 @@
-export interface Crianca {
+export interface ICrianca {
     nome: string;
     responsavel: string;
-    telefone: string;
+    celular: string;
+    idade: number;
     horaInicio: string;
     tempo: string;
     horaFim: string;
     valor: number;
-    // status: number;
+    status: number;
     pagamento: boolean;
-    // valorPago: number;
-    // troco: number;
+    valorPago: number;
+    troco: number;
 }
 

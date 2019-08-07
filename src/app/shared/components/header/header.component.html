@@ -1,0 +1,7 @@
+<nav class="navbar navbar-dark bg-primary text-white">
+    <a (click)="goTo()" class="navbar-brand">
+        <i *ngIf="data.back" class="fa fa-angle-left" aria-hidden="true"></i>
+        {{ data.titlePage }}
+        <i class="fa fa-{{ data.icon }}" aria-hidden="true"></i>
+    </a>
+</nav>

@@ -1,14 +1,6 @@
-<nav class="navbar navbar-dark bg-primary mb-5">
-    <a class="navbar-brand" routerLink="/criancas">
-        <i class="fa fa-angle-left" aria-hidden="true"></i>
-        Lista de Crianças
-        <i class="fa fa-child" aria-hidden="true"></i>
-    </a>
-</nav>
-
-<h1 class="display-4 text-center mb-5">Cadastro de Crianças</h1>
-
-<div class="container">
+<app-header></app-header>
+<div class="container mt-5">
+    <h1 class="display-4 text-center mb-5">Cadastro de Crianças</h1>
     <div class="card">
 
         <div class="card-header bg-primary text-light">
@@ -19,9 +11,10 @@
 
             <form>
                 <div class="form-group">
+                    <legend class="mb-4">Identificação</legend>
                     <label class="font-weight-bold">Nome</label>
-                    <input type="text" class="form-control" name="nome" id="idNome" required minlength="3">
-
+                    <input type="text" class="form-control" name="nome" id="idNome" required minlength="3"
+                        maxlength="20" placeholder="Digite o nome da criança">
                     <!-- <div *ngIf="nome.invalid && (nome.dirty || nome.touched)" class="alert alert-danger">
                     <div *ngIf="nome?.errors.required">
                         Nome é obrigatório.
@@ -34,61 +27,81 @@
 
                 <div class="form-group">
                     <label class="font-weight-bold">Nome do responsável</label>
-                    <input type="text" class="form-control" name="responsavel" required minlength="3">
-
-                    <!-- <div *ngIf="responsavel.invalid && (responsavel.dirty || responsavel.touched)"
-                    class="alert alert-danger">
-                    <div *ngIf="responsavel?.errors.required">
-                        Nome do responsável é obrigatório.
-                    </div>
-                    <div *ngIf="responsavel?.errors.minlength">
-                        Nome do responsável precisa ter no mínino 3 caracteres.
-                    </div>
-                </div> -->
+                    <input type="text" class="form-control" name="responsavel" required minlength="3" maxlength="20"
+                        placeholder="Digite o nome do responsável">
                 </div>
 
-                <div class="form-group">
-                    <label class="font-weight-bold">Telefone</label>
-                    <input type="text" class="form-control" name="telefone" required minlength="8" maxlength="9">
-
-                    <!-- <div *ngIf="telefone.invalid && (telefone.dirty || telefone.touched)" class="alert alert-danger">
-                    <div *ngIf="telefone?.errors.required">
-                        Telefone é obrigatório.
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <label class="font-weight-bold">Celular</label>
+                        <input type="text" class="form-control" name="celular" required minlength="8" maxlength="9"
+                            placeholder="Digite somente números">
                     </div>
-                    <div *ngIf="telefone?.errors.minlength">
-                        Telefone precisa ter no mínino 8 caracteres.
-                    </div>
-                    <div *ngIf="telefone?.errors.minlength">
-                        Telefone tem no máximo 9 caracteres.
-                    </div>
-                </div> -->
-                </div>
 
-                <!-- <div class="form-group">
-                <label class="font-weight-bold">Preço</label>
-                <input type="number" class="form-control" [(ngModel)]="produto.preco" name="preco" #preco="ngModel"
-                    required />
-
-                <div *ngIf="preco.invalid && (preco.dirty || preco.touched)" class="alert alert-danger">
-                    <div *ngIf="preco?.errors.required">
-                        Preço é obrigatório.
+                    <div class="form-group col-6">
+                        <label class="font-weight-bold">Idade</label>
+                        <input type="number" class="form-control" name="idade" required minlength="8" maxlength="8"
+                            placeholder="Insira a idade da criança">
                     </div>
                 </div>
-            </div> -->
 
-                <button type="submit" class="btn btn-primary font-weight-bold"> <i class="fa fa-check" aria-hidden="true"></i> Salvar</button>
-                <a routerLink="/criancas" class="btn btn-danger ml-2 font-weight-bold"> <i class="fa fa-times"
+                <div class="form-row">
+                    <legend class="mb-4 mt-3">Controle</legend>
+                    <div class="form-group col-3">
+                        <label class="font-weight-bold">Tempo</label>
+                        <input type="number" class="form-control" name="tempo" min="0" max="360"
+                            placeholder="Insira o tempo">
+                    </div>
+
+                    <div class="form-group col-3">
+                        <label class="font-weight-bold">Início</label>
+                        <input type="text" class="form-control" name="inicio" value="19:30:00" readonly>
+                    </div>
+
+                    <div class="form-group col-3">
+                        <label class="font-weight-bold">Fim</label>
+                        <input type="text" class="form-control" name="fim" value="20:30:00" readonly>
+                    </div>
+
+                    <div class="form-group col-3">
+                        <label class="font-weight-bold">Valor</label>
+                        <input type="number" class="form-control" name="valor" readonly placeholder="R$">
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <legend class="mb-4 mt-3">Financeiro</legend>
+
+                    <div class="form-group col-8">
+                        <label class="font-weight-bold">Pagamento</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input id="idCheckPagamento" type="checkbox">
+                                </div>
+                            </div>
+                            <input type="text" class="form-control"
+                                value="Marque caso o pagamento já tenha sido efetuado" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-2">
+                        <label class="font-weight-bold">Valor pago</label>
+                        <input type="number" class="form-control" name="valorPago" min="0" max="100" placeholder="R$">
+                    </div>
+
+                    <div class="form-group col-2">
+                        <label class="font-weight-bold">Troco</label>
+                        <input type="number" class="form-control" name="troco" placeholder="R$" readonly>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary font-weight-bold mt-4 mb-3"> <i class="fa fa-check"
+                        aria-hidden="true"></i> Salvar</button>
+                <a routerLink="/criancas" class="btn btn-danger ml-2 font-weight-bold mt-4 mb-3"> <i class="fa fa-times"
                         aria-hidden="true"></i> Cancelar</a>
-
             </form>
         </div>
     </div>
 </div>
-
-<footer class="container text-center">
-    <p class="align-bottom"> © Copyright 2019 - Feito por Matheus Manhães <br>
-        <a href="http://www.github.com/momanhaes" target="_blank"> <i class="fa fa-github" aria-hidden="true"></i>
-            GitHub</a> |
-        <a href="https://www.linkedin.com/in/matheus-manh%C3%A3es-7a272a170/" target="_blank"> <i
-                class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></p>
-</footer>
