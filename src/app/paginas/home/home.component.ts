@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CriancasService } from '../criancas/criancas.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private criancasService: CriancasService) {
+
+  }
+
+ async obterCriancas() {
+    console.log(await this.criancasService.obterCriancas());
+  }
 
   ngOnInit() {
+    this.obterCriancas();
   }
 
 }

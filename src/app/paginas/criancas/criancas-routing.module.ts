@@ -9,7 +9,7 @@ import { menu } from 'src/app/shared/model/menu';
 // resolve: { data: CriancasListResolver }
 
 const routes: Routes = [
-  { path: '', component: CriancasListComponent, data: {menu: menu.lista}},
+  { path: '', component: CriancasListComponent, data: {menu: menu.lista}, resolve: { data: CriancasListResolver }},
   { path: 'cadastrar', component: CriancasFormComponent, data: {menu: menu.formulario} }
 ];
 
